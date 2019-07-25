@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ePn-Pd-iNx" customClass="ZHLQKVideoChangeRate">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wk_rate_bg" translatesAutoresizingMaskIntoConstraints="NO" id="hWk-ak-lRU">
+                    <rect key="frame" x="0.0" y="0.0" width="288" height="42"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="倍速：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zr-bC-sSq">
+                    <rect key="frame" x="13" y="8" width="46" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="M3y-fw-2po"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fjz-J0-lu1">
+                    <rect key="frame" x="59" y="5" width="219" height="24"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJO-nF-op2" userLabel="0.8btn">
+                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="0.8x"/>
+                            <connections>
+                                <action selector="btn08Click:" destination="ePn-Pd-iNx" eventType="touchUpInside" id="Pkb-8q-eaJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBl-UU-49o" userLabel="1.0btn">
+                            <rect key="frame" x="57.5" y="0.0" width="47" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="1.0x"/>
+                            <connections>
+                                <action selector="btn10Click:" destination="ePn-Pd-iNx" eventType="touchUpInside" id="JDM-YM-j14"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiG-tr-eiB" userLabel="1.5btn">
+                            <rect key="frame" x="114.5" y="0.0" width="47.5" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="1.5x"/>
+                            <connections>
+                                <action selector="btn15Click:" destination="ePn-Pd-iNx" eventType="touchUpInside" id="UWa-8O-V3o"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0i-uC-9Jd" userLabel="2.0btn">
+                            <rect key="frame" x="172" y="0.0" width="47" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="2.0x"/>
+                            <connections>
+                                <action selector="btn20Click:" destination="ePn-Pd-iNx" eventType="touchUpInside" id="jOO-SB-6NS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="f3C-hg-hYz"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="POi-QI-A6L" firstAttribute="trailing" secondItem="hWk-ak-lRU" secondAttribute="trailing" id="1RB-lp-zl9"/>
+                <constraint firstItem="hWk-ak-lRU" firstAttribute="leading" secondItem="POi-QI-A6L" secondAttribute="leading" id="8WS-Rh-bar"/>
+                <constraint firstItem="2Zr-bC-sSq" firstAttribute="leading" secondItem="POi-QI-A6L" secondAttribute="leading" constant="13" id="IS1-bF-ba0"/>
+                <constraint firstItem="POi-QI-A6L" firstAttribute="trailing" secondItem="Fjz-J0-lu1" secondAttribute="trailing" constant="10" id="RHw-Sz-3Wv"/>
+                <constraint firstItem="Fjz-J0-lu1" firstAttribute="leading" secondItem="2Zr-bC-sSq" secondAttribute="trailing" id="Uur-bE-uu1"/>
+                <constraint firstItem="hWk-ak-lRU" firstAttribute="top" secondItem="ePn-Pd-iNx" secondAttribute="top" id="bzk-OX-92N"/>
+                <constraint firstAttribute="bottom" secondItem="hWk-ak-lRU" secondAttribute="bottom" id="edn-nI-0aX"/>
+                <constraint firstItem="Fjz-J0-lu1" firstAttribute="centerY" secondItem="2Zr-bC-sSq" secondAttribute="centerY" id="fS5-JX-kvn"/>
+                <constraint firstItem="2Zr-bC-sSq" firstAttribute="top" secondItem="POi-QI-A6L" secondAttribute="top" constant="8" id="gov-zr-8pp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="POi-QI-A6L"/>
+            <connections>
+                <outlet property="btn08" destination="oJO-nF-op2" id="7TU-jh-uvz"/>
+                <outlet property="btn10" destination="SBl-UU-49o" id="LVn-MC-q0a"/>
+                <outlet property="btn15" destination="kiG-tr-eiB" id="8GK-XJ-KR4"/>
+                <outlet property="btn20" destination="W0i-uC-9Jd" id="FV4-Ma-5X8"/>
+            </connections>
+            <point key="canvasLocation" x="-60.799999999999997" y="131.33433283358323"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="wk_rate_bg" width="28.5" height="41.5"/>
+    </resources>
+</document>
